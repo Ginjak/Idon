@@ -2,6 +2,8 @@
   --nav-bg-black: rgba(0, 0, 0, 0.63);
   --ligth-grey: #f8f8f8;
   --blue-txt: #273673;
+  --btn-ligth-blue: #3c6ab3;
+  --btn-dark-blue: #263a7c;
   --white: #fff;
 }
 
@@ -22,35 +24,61 @@ body {
   max-width: 1168px;
 }
 
+.fs-48 {
+  font-size: 48px;
+}
+.fs-15 {
+  font-size: 15;
+}
+
+.mix-w-847 {
+  max-width: 874px;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 10px 50px;
+}
+.btn-ligth-blue {
+  background: var(--btn-ligth-blue);
+  transition: all 0.2s linear;
+}
+.btn-ligth-blue:hover {
+  background: var(--btn-dark-blue);
+  transition: all 0.2s linear;
+}
+
 /* Header/Navigation */
 
-header {
+#header {
   position: absolute;
   width: 100%;
   background: var(--nav-bg-black);
   transition: background 0.2s linear;
+  z-index: 999;
 }
-header:hover {
+#header:hover {
   background: var(--white);
   transition: background 0.2s linear;
 }
 
-header:hover .navbar-nav .nav-item a.nav-link.active .underline {
+#header:hover .navbar-nav .nav-item a.nav-link.active .underline {
   background-image: url("./icons/blue_dash.svg");
 }
-header:hover .navbar-nav .nav-item a.nav-link.active,
-header:hover .navbar-nav .nav-item a.nav-link {
+#header:hover .navbar-nav .nav-item a.nav-link.active,
+#header:hover .navbar-nav .nav-item a.nav-link {
   color: var(--blue-txt);
   transition: all 0.2s linear;
 }
-header:hover .navbar-brand {
+#header:hover .navbar-brand {
   background-image: url("./logo/Logo_blue.svg");
 }
 
-header:hover .user-icon {
+#header:hover .user-icon {
   background-image: url("./icons/user_blue.svg");
 }
-header:hover .cart-icon {
+
+#header:hover .cart-icon {
   background-image: url("./icons/cart_blue.svg");
 }
 
@@ -104,4 +132,43 @@ header:hover .cart-icon {
   height: 2px;
   background-image: url("./icons/white_dash.svg");
   transition: all 0.2s linear;
+}
+.navbar .user-icon .underline,
+.navbar .cart-icon .underline {
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+  transition: all 0.2s linear;
+  border-radius: 50%;
+}
+.navbar .user-icon:hover .underline,
+.navbar .cart-icon:hover .underline {
+  opacity: 1;
+  transition: all 0.2s linear;
+  background-image: url("./icons/blue_dash.svg");
+}
+
+/* Hero */
+#hero {
+  height: 798px;
+}
+
+#hero .hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 12, 55, 0.76);
+  z-index: 2;
+}
+#hero .hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#hero .hero-content {
+  z-index: 3;
+  margin-top: -76px;
 }

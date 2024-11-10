@@ -19,7 +19,8 @@
     <title>Idon</title>
   </head>
   <body>
-    <header>
+    <!-- Header/Nav pradzia -->
+    <header id="header">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid p-0 m-0">
           <div class="container-xl d-flex">
@@ -72,14 +73,42 @@
                 </li>
               </ul>
               <div class="user-cart-icons d-flex gap-2">
-                <a href="#" class="user-icon"></a>
-                <a href="#" class="cart-icon"></a>
+                <a href="#" class="user-icon position-relative">
+                  <div class="underline"></div>
+                </a>
+                <a href="#" class="cart-icon position-relative">
+                  <div class="underline"></div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </nav>
     </header>
+    <!-- Header/Nav pabaiga -->
+    <!-- Hero section pradzia -->
+    <section id="hero" class="position-relative">
+      <img class="hero-img" src="./img/hero_img.webp" alt="Hero image" />
+      <div class="hero-overlay"></div>
+      <div class="container-xl d-flex flex-column justify-content-center h-100">
+        <div class="hero-content position-relative d-flex flex-column gap-4">
+          <h1 class="fs-48 text-white d-flex flex-column fw-normal mb-2">
+            <span>Pasitikėkite mūsų </span
+            ><span>patirtimi – sprendimai jūsų gamybai!</span>
+          </h1>
+          <p class="fs-4 mb-0 text-white mix-w-847 mb-5">
+            Trumpas aprašymas.Trumpas aprašymas.Trumpas aprašymas.Trumpas
+            aprašymas.Trumpas aprašymas.Trumpas aprašymas.
+          </p>
+          <div>
+            <a href="#" class="btn fs-15 fw-bold btn-ligth-blue text-white"
+              >Susisiekti</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero section pabaiga -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
