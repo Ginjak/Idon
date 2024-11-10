@@ -1,0 +1,107 @@
+:root {
+  --nav-bg-black: rgba(0, 0, 0, 0.63);
+  --ligth-grey: #f8f8f8;
+  --blue-txt: #273673;
+  --white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s linear;
+}
+body {
+  position: relative;
+}
+
+/* Utilities */
+
+.container-xl {
+  max-width: 1168px;
+}
+
+/* Header/Navigation */
+
+header {
+  position: absolute;
+  width: 100%;
+  background: var(--nav-bg-black);
+  transition: background 0.2s linear;
+}
+header:hover {
+  background: var(--white);
+  transition: background 0.2s linear;
+}
+
+header:hover .navbar-nav .nav-item a.nav-link.active .underline {
+  background-image: url("./icons/blue_dash.svg");
+}
+header:hover .navbar-nav .nav-item a.nav-link.active,
+header:hover .navbar-nav .nav-item a.nav-link {
+  color: var(--blue-txt);
+  transition: all 0.2s linear;
+}
+header:hover .navbar-brand {
+  background-image: url("./logo/Logo_blue.svg");
+}
+
+header:hover .user-icon {
+  background-image: url("./icons/user_blue.svg");
+}
+header:hover .cart-icon {
+  background-image: url("./icons/cart_blue.svg");
+}
+
+.navbar {
+  padding: 10px 0;
+}
+
+.navbar-nav .nav-item a.nav-link,
+.navbar-nav .nav-item a.nav-link.active,
+.navbar-nav .nav-item a.nav-link:hover,
+.navbar-nav .nav-item a.nav-link:focus {
+  color: var(--ligth-grey);
+  position: relative;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+
+.navbar .navbar-brand {
+  width: 115px;
+  height: 56px;
+  background-image: url("./logo/logo_ligth.svg");
+}
+
+.navbar .user-icon {
+  width: 14px;
+  height: 19px;
+  background-image: url("./icons/user_white.svg");
+}
+.navbar .cart-icon {
+  width: 22px;
+  height: 19px;
+  background-image: url("./icons/cart_white.svg");
+}
+
+.navbar-nav .nav-item a.nav-link.active .underline {
+  opacity: 1;
+}
+.navbar-nav .nav-item a.nav-link:hover .underline {
+  opacity: 1;
+  transition: all 0.2s linear;
+  background-image: url("./icons/blue_dash.svg");
+}
+.navbar .underline {
+  opacity: 0;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+  border-radius: 25%;
+  height: 2px;
+  background-image: url("./icons/white_dash.svg");
+  transition: all 0.2s linear;
+}
