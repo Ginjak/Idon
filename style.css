@@ -16,8 +16,12 @@
   font-family: "Inter", sans-serif;
   transition: all 0.2s linear;
 }
+html {
+  overflow-x: hidden;
+}
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 /* Utilities */
@@ -89,29 +93,9 @@ body {
   transform: translateY(0);
 }
 
-#header:hover {
-  background: var(--white);
-  transition: background 0.2s linear;
-}
-
-#header:hover .navbar-nav .nav-item a.nav-link.active .underline {
-  background-image: url("./icons/blue_dash.svg");
-}
-#header:hover .navbar-nav .nav-item a.nav-link.active,
-#header:hover .navbar-nav .nav-item a.nav-link {
-  color: var(--blue-txt);
-  transition: all 0.2s linear;
-}
-#header:hover .navbar-brand {
-  background-image: url("./logo/Logo_blue.svg");
-}
-
-#header:hover .user-icon {
-  background-image: url("./icons/user_blue.svg");
-}
-
-#header:hover .cart-icon {
-  background-image: url("./icons/cart_blue.svg");
+#header .navbar {
+  position: relative;
+  overflow: hidden;
 }
 
 .navbar {
@@ -173,11 +157,52 @@ body {
   transition: all 0.2s linear;
   border-radius: 50%;
 }
-.navbar .user-icon:hover .underline,
-.navbar .cart-icon:hover .underline {
-  opacity: 1;
+
+/* Mobile menu */
+.navbar .navbar-toggler {
+  border: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.navbar .navbar-toggler .hamburger-menu {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: var(--white);
+}
+
+.navbar .navbar-toggler .hamburger-menu:before,
+.navbar .navbar-toggler .hamburger-menu:after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  height: 2px;
   transition: all 0.2s linear;
-  background-image: url("./icons/blue_dash.svg");
+}
+.navbar .navbar-toggler .hamburger-menu:after {
+  top: 8px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler .hamburger-menu.open::before {
+  top: 0px;
+  transform: rotate(45deg);
+}
+
+.navbar .navbar-toggler .hamburger-menu.open::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 /* Hero */
@@ -266,8 +291,77 @@ body {
 }
 
 /* Media queries */
+@media (min-width: 768px) {
+  #header:hover {
+    background: var(--white);
+    transition: background 0.2s linear;
+  }
+  #header:hover .navbar-nav .nav-item a.nav-link.active .underline {
+    background-image: url("./icons/blue_dash.svg");
+  }
 
+  #header:hover .navbar-nav .nav-item a.nav-link.active,
+  #header:hover .navbar-nav .nav-item a.nav-link {
+    color: var(--blue-txt);
+    transition: all 0.2s linear;
+  }
+  #header:hover .navbar-brand {
+    background-image: url("./logo/Logo_blue.svg");
+  }
+
+  #header:hover .user-icon {
+    background-image: url("./icons/user_blue.svg");
+  }
+
+  #header:hover .cart-icon {
+    background-image: url("./icons/cart_blue.svg");
+  }
+  .navbar .user-icon:hover .underline,
+  .navbar .cart-icon:hover .underline {
+    opacity: 1;
+    transition: all 0.2s linear;
+    background-image: url("./icons/blue_dash.svg");
+  }
+}
 @media (max-width: 767px) {
+  .navbar .navbar-collapse {
+    position: fixed;
+    top: 76px;
+    right: -100vw; /* Off-screen by default */
+    background: var(--white);
+    transition: right 0.5s ease-in-out;
+    z-index: 7;
+  }
+  .navbar .user-icon:hover .underline,
+  .navbar .cart-icon:hover .underline {
+    opacity: 1;
+    transition: all 0.2s linear;
+  }
+  .navbar-nav .nav-item a.nav-link,
+  .navbar-nav .nav-item a.nav-link.active,
+  .navbar-nav .nav-item a.nav-link:hover,
+  .navbar-nav .nav-item a.nav-link:focus {
+    color: var(--blue-txt);
+    position: relative;
+    opacity: 1;
+    transition: all 0.2s linear;
+  }
+  .navbar-nav .nav-item a.nav-link.active .underline {
+    background-image: url("./icons/blue_dash.svg");
+  }
+
+  .navbar .user-icon {
+    background-image: url("./icons/user_blue.svg");
+  }
+  .navbar .cart-icon {
+    background-image: url("./icons/cart_blue.svg");
+  }
+  .navbar .user-icon:hover .underline,
+  .navbar .cart-icon:hover .underline {
+    opacity: 1;
+    transition: all 0.2s linear;
+    background-image: url("./icons/blue_dash.svg");
+  }
   #paslaugos .paslaugos-wraper .card {
     padding: 68px 20px 20px 20px;
     border-radius: 5px;

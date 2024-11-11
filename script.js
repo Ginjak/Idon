@@ -31,3 +31,28 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 });
+
+document
+  .querySelector(".navbar-toggler")
+  .addEventListener("click", function () {
+    const navbarCollapse = document.querySelector(".navbar .navbar-collapse");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+    // Toggle the navbar-collapse visibility
+    if (navbarCollapse.style.right === "0px") {
+      navbarCollapse.style.right = "-100vw";
+    } else {
+      navbarCollapse.style.right = "0";
+    }
+
+    // Toggle the hamburger menu state (rotate and background change)
+    if (hamburgerMenu.classList.contains("open")) {
+      hamburgerMenu.classList.remove("open");
+      // Reset to original state (before clicked)
+      hamburgerMenu.style.backgroundColor = "#fff"; // Set the original background color
+    } else {
+      hamburgerMenu.classList.add("open");
+      // Set background color to transparent
+      hamburgerMenu.style.backgroundColor = "transparent";
+    }
+  });
