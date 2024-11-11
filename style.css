@@ -48,15 +48,32 @@ body {
   transition: all 0.2s linear;
 }
 
+/* Slide in animation */
+.slide-in-fade-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.slide-in-fade-in.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* Header/Navigation */
 
 #header {
   position: absolute;
   width: 100%;
   background: var(--nav-bg-black);
-  transition: background 0.2s linear;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out, background 0.2s linear;
   z-index: 999;
 }
+#header.slide-in {
+  transform: translateY(0);
+}
+
 #header:hover {
   background: var(--white);
   transition: background 0.2s linear;
