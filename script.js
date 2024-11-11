@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("header").classList.add("slide-in");
 
   // Elements to observe for slide-in and fade-in
-  const elements = document.querySelectorAll(".slide-in-fade-in");
+  const slideInFadeInElements = document.querySelectorAll(".slide-in-fade-in");
+  const fadeInElements = document.querySelectorAll(".fade-in");
 
-  // IntersectionObserver callback function
+  // IntersectionObserver callback function for slide-in and fade-in elements
   const handleIntersection = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -20,8 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
     threshold: 0.1, // Adjust threshold as needed
   });
 
-  // Observe each element
-  elements.forEach((element) => {
+  // Observe each slide-in and fade-in element
+  slideInFadeInElements.forEach((element) => {
+    observer.observe(element);
+  });
+
+  // Observe each fade-in element
+  fadeInElements.forEach((element) => {
     observer.observe(element);
   });
 });

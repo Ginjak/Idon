@@ -1,10 +1,12 @@
 :root {
   --nav-bg-black: rgba(0, 0, 0, 0.63);
+  --bg-grey: #eaeaea;
   --ligth-grey: #f8f8f8;
   --blue-txt: #273673;
   --btn-ligth-blue: #3c6ab3;
   --btn-dark-blue: #263a7c;
   --white: #fff;
+  --black: #000;
 }
 
 * {
@@ -34,6 +36,9 @@ body {
 .mix-w-847 {
   max-width: 874px;
 }
+.mix-w-1168 {
+  max-width: 1168px;
+}
 
 .btn {
   border-radius: 5px;
@@ -58,6 +63,16 @@ body {
 .slide-in-fade-in.in-view {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Fade in animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.in-view {
+  opacity: 1;
 }
 
 /* Header/Navigation */
@@ -188,4 +203,96 @@ body {
 #hero .hero-content {
   z-index: 3;
   margin-top: -76px;
+}
+
+/* Paslaugos section */
+
+#paslaugos {
+  background: var(--bg-grey);
+}
+#paslaugos .paslaugos-wraper {
+  z-index: 6;
+  margin-top: -150px;
+}
+#paslaugos .paslaugos-wraper .card {
+  padding: 68px 20px 20px 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#paslaugos .paslaugos-wraper .card a,
+#paslaugos .paslaugos-wraper .card a:visited {
+  text-decoration: none;
+  color: var(--black);
+}
+
+#paslaugos .paslaugos-wraper .card:hover .icon {
+  background-image: url("./img/paslaugos_1_hover.svg");
+}
+#paslaugos .paslaugos-wraper .card:hover .icon-2 {
+  background-image: url("./img/paslaugos_2_hover.svg");
+}
+#paslaugos .paslaugos-wraper .card:hover .icon-3 {
+  background-image: url("./img/paslaugos_3_hover.svg");
+}
+#paslaugos .paslaugos-wraper .card:hover {
+  margin-top: -20px;
+}
+#paslaugos .paslaugos-wraper .card .icon,
+#paslaugos .paslaugos-wraper .card .icon-2,
+#paslaugos .paslaugos-wraper .card .icon-3 {
+  width: 164px;
+  height: 179px;
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  transform: translateX(-50%);
+  background-image: url("./img/paslaugos_1.svg");
+}
+
+#paslaugos .paslaugos-wraper .card .icon-2 {
+  background-image: url("./img/paslaugos_2.svg");
+}
+#paslaugos .paslaugos-wraper .card .icon-3 {
+  background-image: url("./img/paslaugos_3.svg");
+}
+
+/* Apie mus */
+#apie-mus .title-wraper {
+  background: var(--bg-grey);
+}
+#apie-mus .title-wraper .section-title {
+  padding: 0 12px;
+}
+
+/* Media queries */
+
+@media (max-width: 767px) {
+  #paslaugos .paslaugos-wraper .card {
+    padding: 68px 20px 20px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+  }
+  #paslaugos .paslaugos-wraper .col {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  #paslaugos .paslaugos-wraper .card .icon,
+  #paslaugos .paslaugos-wraper .card .icon-2,
+  #paslaugos .paslaugos-wraper .card .icon-3 {
+    width: 127px;
+    height: 138px;
+    top: -75px;
+    background-size: 127px 138px;
+  }
+  #paslaugos .paslaugos-wraper h5.fs-4 {
+    font-size: 20px !important;
+  }
+  #paslaugos .paslaugos-wraper p.fs-4,
+  #paslaugos .paslaugos-wraper ul.fs-4 {
+    font-size: 16px !important;
+  }
 }
