@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Create an IntersectionObserver instance
   const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.1, // Adjust threshold as needed
+    threshold: window.innerWidth <= 768 ? 0.5 : 0.1, // Larger threshold for small screens
   });
 
   // Observe each slide-in and fade-in element
