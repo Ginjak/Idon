@@ -46,7 +46,11 @@ body {
 
 .btn {
   border-radius: 5px;
-  padding: 10px 50px;
+  padding: 5px 50px;
+}
+.btn-small {
+  border-radius: 5px;
+  padding: 5px 34px;
 }
 .btn-ligth-blue {
   background: var(--btn-ligth-blue);
@@ -234,7 +238,7 @@ body {
 /* Paslaugos section */
 
 #paslaugos {
-  background: var(--bg-grey);
+  background: var(--ligth-grey);
 }
 #paslaugos .paslaugos-wraper {
   z-index: 6;
@@ -285,10 +289,43 @@ body {
 
 /* Apie mus */
 #apie-mus .title-wraper {
-  background: var(--bg-grey);
+  background: var(--ligth-grey);
 }
 #apie-mus .title-wraper .section-title {
   padding: 0 12px;
+}
+
+#produkcija {
+  background: var(--ligth-grey);
+}
+
+#produkcija .img-wraper {
+  height: 308px;
+  max-width: 308px;
+  width: 100%;
+  display: block;
+  background: var(--bg-grey);
+  border-radius: 14px;
+  margin-bottom: 32px;
+}
+
+#produkcija .swiper-slide {
+  padding-top: 15px;
+  transition: all 0.2s linear;
+}
+#produkcija .img-wraper:hover {
+  margin-top: -10px;
+  margin-bottom: 42px;
+}
+
+#produkcija .swiper-button-next,
+#produkcija .swiper-button-prev {
+  color: var(--black);
+  top: calc(50% - 50px);
+}
+#produkcija .swiper-button-prev:after,
+#produkcija .swiper-button-next:after {
+  font-size: 34px;
 }
 
 /* Media queries */
@@ -376,7 +413,9 @@ body {
   #hero p.fs-4 {
     font-size: 20px !important;
   }
-
+  #paslaugos .col {
+    padding: 0 64px;
+  }
   #paslaugos .paslaugos-wraper .card {
     padding: 68px 20px 20px 20px;
     border-radius: 5px;
@@ -388,6 +427,16 @@ body {
   }
   .slide-in-fade-in {
     transform: translateX(0);
+  }
+  #apie-mus .title-wraper {
+    background: var(--white);
+  }
+  #apie-mus .fs-4 {
+    font-size: 20px !important;
+  }
+  #produkcija .img-wraper {
+    max-width: 284px;
+    height: 284px;
   }
 }
 
@@ -404,8 +453,15 @@ body {
   #hero .hero-content {
     margin-top: 0;
   }
+
   #paslaugos .paslaugos-wraper {
     margin-top: -70px;
+  }
+  #paslaugos .col {
+    padding: 0 34px;
+  }
+  #paslaugos .col:last-child {
+    margin-bottom: 0;
   }
   #paslaugos .paslaugos-wraper .card .icon,
   #paslaugos .paslaugos-wraper .card .icon-2,
