@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Slide in the header
   document.getElementById("header").classList.add("slide-in");
+  document.getElementById("nav-overlay").classList.add("slide-in");
 
   // Elements to observe for slide-in and fade-in
   const slideInFadeInElements = document.querySelectorAll(".slide-in-fade-in");
@@ -94,3 +95,7 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+function updateMainImage(src) {
+  document.getElementById("mainImage").src = src;
+}

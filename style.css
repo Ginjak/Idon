@@ -41,14 +41,21 @@ body {
 .fs-12 {
   font-size: 12px;
 }
-.mix-w-1168 {
+
+.fw-800 {
+  font-weight: 800;
+}
+.max-w-1168 {
   max-width: 1168px;
 }
 
-.mix-w-847 {
+.max-w-847 {
   max-width: 874px;
 }
-.mix-w-467 {
+.max-w-530 {
+  max-width: 530px;
+}
+.max-w-467 {
   max-width: 467px;
 }
 
@@ -169,6 +176,28 @@ body {
   opacity: 0;
   transition: all 0.2s linear;
   border-radius: 50%;
+}
+#nav-overlay {
+  position: absolute;
+  width: 100%;
+  height: 76px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out, background 0.2s linear;
+  background: #000;
+  background-image: url("./img/hero_img.webp");
+}
+
+#nav-overlay:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.63);
+}
+#nav-overlay.slide-in {
+  transform: translateY(0);
 }
 
 /* Mobile menu */
@@ -521,4 +550,61 @@ body {
   #footer .fs-6 {
     font-size: 14px !important;
   }
+}
+
+/* Product page */
+#product-section {
+  background: var(--ligth-grey);
+  padding-top: 176px !important;
+}
+#product-section .product-gallery {
+  padding-right: 34px;
+  border-right: 1px solid var(--bg-grey);
+}
+#product-section .main-image {
+  background: var(--bg-grey);
+  width: 100%;
+  min-height: 441px;
+  border-radius: 10px;
+}
+#product-section .thumb-img-wraper {
+  width: 153px;
+  height: 153px;
+  border-radius: 10px;
+  background: var(--bg-grey);
+  cursor: pointer;
+  transition: background 0.2s linear;
+}
+#product-section .thumb-img-wraper:hover {
+  background: var(--white);
+  transition: background 0.2s linear;
+}
+
+#product-section .details {
+  padding-left: 34px;
+}
+
+#product-section .breadcrumb-item + .breadcrumb-item::before {
+  content: var(--bs-breadcrumb-divider, "|");
+}
+#product-section .breadcrumb a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+#product-section .comments {
+  color: #000;
+  transition: opacity 0.2s linear;
+  text-underline-offset: 3px;
+}
+#product-section .comments:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s linear;
+}
+
+#rateYo .rateyo .star:hover {
+  color: #080503 !important; /* Hover color */
+}
+.jq-ry-container {
+  padding: 0 !important;
 }
