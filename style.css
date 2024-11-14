@@ -3,8 +3,10 @@
   --bg-grey: #eaeaea;
   --ligth-grey: #f8f8f8;
   --blue-txt: #273673;
+  --grey-txt: #939393;
   --btn-ligth-blue: #3c6ab3;
   --btn-dark-blue: #263a7c;
+  --bg-footer: #121226;
   --white: #fff;
   --black: #000;
 }
@@ -34,14 +36,20 @@ body {
   font-size: 48px;
 }
 .fs-15 {
-  font-size: 15;
+  font-size: 15px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.mix-w-1168 {
+  max-width: 1168px;
 }
 
 .mix-w-847 {
   max-width: 874px;
 }
-.mix-w-1168 {
-  max-width: 1168px;
+.mix-w-467 {
+  max-width: 467px;
 }
 
 .btn {
@@ -328,6 +336,34 @@ body {
   font-size: 34px;
 }
 
+#footer {
+  background: url("./img/footer-Bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer .form-control {
+  border-radius: 5px;
+  padding: 10px 14px;
+  font-size: 15px;
+}
+#footer .form-control:focus {
+  box-shadow: 0 0 0 4px rgba(2, 12, 26, 0.25);
+}
+#footer .form-control::placeholder {
+  font-size: 15px;
+  color: var(--grey-txt);
+}
+#footer textarea.form-control {
+  min-height: 132px;
+}
+#footer .footer-bottom {
+  padding: 12px 0;
+  background: var(--bg-footer);
+}
+#footer .footer-bottom img {
+  max-width: 102px;
+}
 /* Media queries */
 @media (min-width: 768px) {
   #header:hover {
@@ -477,5 +513,14 @@ body {
   #paslaugos .paslaugos-wraper p.fs-4,
   #paslaugos .paslaugos-wraper ul.fs-4 {
     font-size: 16px !important;
+  }
+  #footer button.btn {
+    width: 100%;
+  }
+  #footer .fs-5 {
+    font-size: 16px !important;
+  }
+  #footer .fs-6 {
+    font-size: 14px !important;
   }
 }
