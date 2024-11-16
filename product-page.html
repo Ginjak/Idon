@@ -19,6 +19,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
     />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="./style.css" />
     <title>Idon</title>
   </head>
@@ -118,7 +122,7 @@
                       />
                     </div>
                     <div
-                      class="thumbnails d-flex justify-content-between flex-wrap gap-3"
+                      class="thumbnails d-flex justify-content-start justify-content-md-between flex-wrap gap-3"
                     >
                       <div class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative">
                         <img
@@ -160,7 +164,76 @@
                 <p class="max-w-530 mb-4">Trumpas produkto aprašymas. Trumpas produkto aprašymas. Trumpas produkto aprašymas. Trumpas produkto aprašymas. </p>
                 <p class="fs-5 fw-800 mb-2">119.99<span>&euro;</span></p>
                 <div id="rateYo" class="py-0 mb-1"></div>
-                <a href="#" class="comments fs-5 fw-light">12 Atsiliepimų</a>
+                <a href="#" class="comments fs-5 fw-light ">12 Atsiliepimų</a>
+                <form action="" id="product-form" class="mt-4 d-flex flex-column gap-4">
+                  <div class="input-wraper d-flex justify-content-between">
+                  <label for="ilgis-plotis" class="fs-5">Ilgis, plotis mm:</label>
+                  <select class="form-control js-example-tags2 js-example-responsive" style="width: 50%" id="ilgis-plotis">
+                    <option selected="selected" disabled>Irašykite arba pasirinkite</option>
+                    <option>Pasirinkimas 1</option>
+                    <option>Pasirinkimas 2</option>
+                  </select>
+                </div>
+                
+                  <div class="input-wraper d-flex justify-content-between">
+                  <label for="mygtuku-skaicius" class="fs-5">Mygtukų skaičius:</label>
+                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="mygtuku-skaicius">
+                    <option selected="selected" disabled>Irašykite arba pasirinkite</option>
+                    <option>Pasirinkimas 1</option>
+                    <option>Pasirinkimas 2</option>
+                  </select>
+                </div>
+
+                  <div class="input-wraper d-flex justify-content-between">
+                  <label for="kampu-radiusas" class="fs-5">Klaviatūros kampų radiusas:</label>
+                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="kampu-radiusas">
+                    <option selected="selected" disabled>Irašykite arba pasirinkite</option>
+                    <option>Pasirinkimas 1</option>
+                    <option>Pasirinkimas 2</option>
+                  </select>
+                </div>
+
+                  <div class="input-wraper d-flex justify-content-between">
+                  <label for="jungties-ilgis" class="fs-5">Jungties ilgis:</label>
+                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="jungties-ilgis">
+                    <option selected="selected" disabled>Irašykite arba pasirinkite</option>
+                    <option>Pasirinkimas 1</option>
+                    <option>Pasirinkimas 2</option>
+                  </select>
+                </div>
+                
+                  <div class="input-wraper d-flex justify-content-between">
+                  <label for="pagrindo-spalvos" class="fs-5">Pagrindo spalvos:</label>
+                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="pagrindo-spalvos">
+                    <option selected="selected" disabled>Pasirinkite</option>
+                    <option>Raudona</option>
+                    <option>Geltona</option>
+                  </select>
+                </div>
+
+                  <div class="input-wraper d-flex justify-content-between">
+                  <label for="mygtuku-spalvos" class="fs-5">Mygtukų spalvos:</label>
+                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="mygtuku-spalvos">
+                    <option selected="selected" disabled>Pasirinkite</option>
+                    <option>Raudona</option>
+                    <option>Geltona</option>
+                  </select>
+                </div>
+
+                  <div class="input-wraper d-flex justify-content-between">
+                  <label for="mygtuku-remo-spalvos" class="fs-5">Mygtuko rėmelio spalva:</label>
+                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="mygtuku-remo-spalvos">
+                    <option selected="selected" disabled>Pasirinkite</option>
+                    <option>Raudona</option>
+                    <option>Geltona</option>
+                  </select>
+                </div>
+                  <div class="btn-wraper d-inline-flex gap-3">
+                  <button class="btn fs-15 fw-bold btn-ligth-blue text-white">Pirkti</button>
+                  <button class="btn fs-15 fw-bold btn-dark-blue text-white">Į krepšeli</button>
+                </div>
+                <p class="fs-14">Siuntų pristatymo laikas Lietuvoje – 3-5 d.d</p>
+                </form>
                 </div>
               </div>
             </div>
@@ -282,6 +355,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script>
       $(function () {
   $("#rateYo").rateYo({
@@ -292,6 +366,18 @@
     ratedFill: "#000000",   
   });
 });
+    </script>
+    
+   
+    <script>
+      $("#ilgis-plotis, #mygtuku-skaicius, #kampu-radiusas, #jungties-ilgis").select2({
+        tags: true,
+        
+      });
+      $("#pagrindo-spalvos, #mygtuku-spalvos, #mygtuku-remo-spalvos").select2({
+        minimumResultsForSearch: -1,       
+      });
+     
     </script>
     <script src="./script.js"></script>
   </body>

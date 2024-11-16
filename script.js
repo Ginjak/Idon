@@ -63,43 +63,46 @@ document
     }
   });
 
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  slidesPerView: 2,
-  spaceBetween: 100,
-  loop: true,
+// Check if Swiper is defined before initializing it
+if (typeof Swiper !== "undefined") {
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    slidesPerView: 2,
+    spaceBetween: 100,
+    loop: true,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 
-  breakpoints: {
-    // when window width is >= 320px
-    270: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+    breakpoints: {
+      // when window width is >= 320px
+      270: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      1050: {
+        slidesPerView: 3,
+        spaceBetween: 100,
+      },
     },
-    576: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    900: {
-      slidesPerView: 3,
-      spaceBetween: 50,
-    },
-    1050: {
-      slidesPerView: 3,
-      spaceBetween: 100,
-    },
-  },
-});
+  });
+}
 
 function updateMainImage(src) {
   document.getElementById("mainImage").src = src;
