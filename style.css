@@ -86,7 +86,7 @@ body {
 .slide-in-fade-in.in-view {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Longer transition time */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* Fade in animation */
@@ -488,9 +488,9 @@ body {
   #paslaugos .paslaugos-wraper .col {
     margin-bottom: 70px;
   }
-  .slide-in-fade-in {
+  /* .slide-in-fade-in {
     transform: translateX(0);
-  }
+  } */
   #apie-mus .title-wraper {
     background: var(--white);
   }
