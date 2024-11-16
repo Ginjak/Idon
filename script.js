@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Slide in the header
   document.getElementById("header").classList.add("slide-in");
 
+  // Check if 'nav-overlay' exists before adding 'slide-in' class
+  const navOverlay = document.getElementById("nav-overlay");
+  if (navOverlay) {
+    navOverlay.classList.add("slide-in");
+  }
+
   // Elements to observe for slide-in and fade-in
   const slideInFadeInElements = document.querySelectorAll(".slide-in-fade-in");
   const fadeInElements = document.querySelectorAll(".fade-in");
@@ -17,11 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // Create an IntersectionObserver instance
-  // const observer = new IntersectionObserver(handleIntersection, {
-  //   threshold: window.innerWidth <= 768 ? 0.5 : 0.1, // Larger threshold for small screens
-  // });
   const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.1, // Use a fixed threshold value
+    threshold: 0.1,
   });
 
   // Observe each slide-in and fade-in element

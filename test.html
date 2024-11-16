@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RateYo Example</title>
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <title>RateYo Example</title>
+
     <style>
       #rateYo {
         margin: 50px;
@@ -17,14 +16,17 @@
     </style>
   </head>
   <body>
-    <div id="rateYo"></div>
-
+    <select class="form-control js-example-tags js-example-responsive">
+      <option selected="selected">orange</option>
+      <option>white</option>
+      <option>purple</option>
+    </select>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script>
-      $(function () {
-        $("#rateYo").rateYo({
-          rating: 3.6,
-          starWidth: "20px",
-        });
+      $(".js-example-tags").select2({
+        placeholder: "Select a number",
+        tags: true,
       });
     </script>
   </body>
