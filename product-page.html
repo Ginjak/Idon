@@ -20,9 +20,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
     />
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"
-    rel="stylesheet"
-  />
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Idon</title>
   </head>
@@ -101,143 +101,297 @@
     <div id="nav-overlay" class="nav-bg-overlay-img"></div>
 
     <!-- Header/Nav pabaiga -->
-     
 
     <main>
       <!-- Product pradzia -->
       <section id="product-section">
         <!-- Product section pradzia -->
         <div class="product">
-          <div class="container-xxl">
-            <div class="product-image-details-wraper">
-              <div class="gallery-details-wraper d-flex flex-column flex-md-row">
-                <div class="gallery w-100 d-flex flex-column justify-content-md-between">
-                  <div class="product-gallery mb-3 mb-md-5">
-                    <div class="main-image mb-4 d-flex justify-content-center align-items-center">
-                      <img
-                        id="mainImage"
-                        src="./icons/cart_dark.svg"
-                        alt="Product Image"
-                        class="fade show img-fluid"
-                      />
-                    </div>
-                    <div
-                      class="thumbnails d-flex justify-content-start justify-content-md-between flex-wrap gap-3"
-                    >
-                      <div class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative">
+          <div class="grey-bg">
+            <div class="container-xl">
+              <div class="product-image-details-wraper">
+                <div
+                  class="gallery-details-wraper d-flex flex-column flex-md-row"
+                >
+                  <div
+                    class="gallery w-100 d-flex flex-column justify-content-md-between"
+                  >
+                    <div class="product-gallery mb-3 mb-md-5">
+                      <div
+                        class="main-image mb-4 d-flex justify-content-center align-items-center"
+                      >
                         <img
-                          class="thumbnail"
+                          id="mainImage"
                           src="./icons/cart_dark.svg"
-                          alt="Thumbnail 1"
-                          onclick="updateMainImage('./icons/cart_dark.svg')"
+                          alt="Product Image"
+                          class="fade show img-fluid"
                         />
                       </div>
-                      <div class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative">
-                        <img
-                          class="thumbnail"
-                          src="./icons/cart_dark.svg"
-                          alt="Thumbnail 2"
-                          onclick="updateMainImage('./icons/cart_dark.svg')"
-                        />
-                      </div>
-                      <div class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative">
-                        <img
-                          class="thumbnail"
-                          src="./icons/cart_dark.svg"
-                          alt="Thumbnail 3"
-                          onclick="updateMainImage('./icons/cart_dark.svg')"
-                        />
+                      <div
+                        class="thumbnails d-flex justify-content-start justify-content-md-between flex-wrap gap-3"
+                      >
+                        <div
+                          class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative"
+                        >
+                          <img
+                            class="thumbnail"
+                            src="./icons/cart_dark.svg"
+                            alt="Thumbnail 1"
+                            onclick="updateMainImage('./icons/cart_dark.svg')"
+                          />
+                        </div>
+                        <div
+                          class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative"
+                        >
+                          <img
+                            class="thumbnail"
+                            src="./icons/cart_dark.svg"
+                            alt="Thumbnail 2"
+                            onclick="updateMainImage('./icons/cart_dark.svg')"
+                          />
+                        </div>
+                        <div
+                          class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative"
+                        >
+                          <img
+                            class="thumbnail"
+                            src="./icons/cart_dark.svg"
+                            alt="Thumbnail 3"
+                            onclick="updateMainImage('./icons/cart_dark.svg')"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                  
-                </div>
 
-                <div class="details w-100">
-                 <h2 class="fs-4 fw-bold mb-1">Produkto pavadinimas</h2>
-                 <nav aria-label="breadcrumb" class="mb-4">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Kategorija</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Kita</li>
-                  </ol>
-                </nav>
-                <p class="max-w-530 mb-4">Trumpas produkto aprašymas. Trumpas produkto aprašymas. Trumpas produkto aprašymas. Trumpas produkto aprašymas. </p>
-                <p class="fs-5 fw-800 mb-2">119.99<span>&euro;</span></p>
-                <div id="rateYo" class="py-0 mb-1"></div>
-                <a href="#" class="comments fs-5 fw-light ">12 Atsiliepimų</a>
-                <form action="" id="product-form" class="mt-4 d-flex flex-column gap-4">
-                  <div class="input-wraper d-flex justify-content-between">
-                  <label for="ilgis-plotis" class="fs-5">Ilgis, plotis mm:</label>
-                  <select class="form-control js-example-tags2 js-example-responsive" style="width: 50%" id="ilgis-plotis">
-                    <option selected="selected" disabled>Irašykite arba pasirinkite</option>
-                    <option>Pasirinkimas 1</option>
-                    <option>Pasirinkimas 2</option>
-                  </select>
-                </div>
-                
-                  <div class="input-wraper d-flex justify-content-between">
-                  <label for="mygtuku-skaicius" class="fs-5">Mygtukų skaičius:</label>
-                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="mygtuku-skaicius">
-                    <option selected="selected" disabled>Irašykite arba pasirinkite</option>
-                    <option>Pasirinkimas 1</option>
-                    <option>Pasirinkimas 2</option>
-                  </select>
-                </div>
+                  <div class="details w-100">
+                    <h2 class="fs-4 fw-800 mb-1">Produkto pavadinimas</h2>
+                    <nav aria-label="breadcrumb" class="mb-4">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                          <a href="#">Kategorija</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          Kita
+                        </li>
+                      </ol>
+                    </nav>
+                    <p class="max-w-530 mb-4">
+                      Trumpas produkto aprašymas. Trumpas produkto aprašymas.
+                      Trumpas produkto aprašymas. Trumpas produkto aprašymas.
+                    </p>
+                    <p class="fs-5 fw-800 mb-2">119.99<span>&euro;</span></p>
+                    <div id="rateYo" class="py-0 mb-1"></div>
+                    <a href="#" class="comments fs-5 fw-light"
+                      >12 Atsiliepimų</a
+                    >
+                    <form
+                      action=""
+                      id="product-form"
+                      class="mt-4 d-flex flex-column gap-4"
+                    >
+                      <div
+                        class="input-wraper d-flex flex-column flex-sm-row justify-content-between gap-2 gap-sm-0"
+                      >
+                        <label for="ilgis-plotis" class="fs-5"
+                          >Ilgis, plotis mm:</label
+                        >
+                        <select
+                          class="form-control js-example-tags2 js-example-responsive"
+                          style="width: 50%"
+                          id="ilgis-plotis"
+                        >
+                          <option selected="selected" disabled>
+                            Irašykite arba pasirinkite
+                          </option>
+                          <option>Pasirinkimas 1</option>
+                          <option>Pasirinkimas 2</option>
+                        </select>
+                      </div>
 
-                  <div class="input-wraper d-flex justify-content-between">
-                  <label for="kampu-radiusas" class="fs-5">Klaviatūros kampų radiusas:</label>
-                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="kampu-radiusas">
-                    <option selected="selected" disabled>Irašykite arba pasirinkite</option>
-                    <option>Pasirinkimas 1</option>
-                    <option>Pasirinkimas 2</option>
-                  </select>
-                </div>
+                      <div
+                        class="input-wraper d-flex flex-column flex-sm-row justify-content-between gap-2 gap-sm-0"
+                      >
+                        <label for="mygtuku-skaicius" class="fs-5"
+                          >Mygtukų skaičius:</label
+                        >
+                        <select
+                          class="form-control js-example-tags js-example-responsive"
+                          style="width: 50%"
+                          id="mygtuku-skaicius"
+                        >
+                          <option selected="selected" disabled>
+                            Irašykite arba pasirinkite
+                          </option>
+                          <option>Pasirinkimas 1</option>
+                          <option>Pasirinkimas 2</option>
+                        </select>
+                      </div>
 
-                  <div class="input-wraper d-flex justify-content-between">
-                  <label for="jungties-ilgis" class="fs-5">Jungties ilgis:</label>
-                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="jungties-ilgis">
-                    <option selected="selected" disabled>Irašykite arba pasirinkite</option>
-                    <option>Pasirinkimas 1</option>
-                    <option>Pasirinkimas 2</option>
-                  </select>
-                </div>
-                
-                  <div class="input-wraper d-flex justify-content-between">
-                  <label for="pagrindo-spalvos" class="fs-5">Pagrindo spalvos:</label>
-                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="pagrindo-spalvos">
-                    <option selected="selected" disabled>Pasirinkite</option>
-                    <option>Raudona</option>
-                    <option>Geltona</option>
-                  </select>
-                </div>
+                      <div
+                        class="input-wraper d-flex flex-column flex-sm-row justify-content-between gap-2 gap-sm-0"
+                      >
+                        <label for="kampu-radiusas" class="fs-5"
+                          >Klaviatūros kampų radiusas:</label
+                        >
+                        <select
+                          class="form-control js-example-tags js-example-responsive"
+                          style="width: 50%"
+                          id="kampu-radiusas"
+                        >
+                          <option selected="selected" disabled>
+                            Irašykite arba pasirinkite
+                          </option>
+                          <option>Pasirinkimas 1</option>
+                          <option>Pasirinkimas 2</option>
+                        </select>
+                      </div>
 
-                  <div class="input-wraper d-flex justify-content-between">
-                  <label for="mygtuku-spalvos" class="fs-5">Mygtukų spalvos:</label>
-                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="mygtuku-spalvos">
-                    <option selected="selected" disabled>Pasirinkite</option>
-                    <option>Raudona</option>
-                    <option>Geltona</option>
-                  </select>
-                </div>
+                      <div
+                        class="input-wraper d-flex flex-column flex-sm-row justify-content-between gap-2 gap-sm-0"
+                      >
+                        <label for="jungties-ilgis" class="fs-5"
+                          >Jungties ilgis:</label
+                        >
+                        <select
+                          class="form-control js-example-tags js-example-responsive"
+                          style="width: 50%"
+                          id="jungties-ilgis"
+                        >
+                          <option selected="selected" disabled>
+                            Irašykite arba pasirinkite
+                          </option>
+                          <option>Pasirinkimas 1</option>
+                          <option>Pasirinkimas 2</option>
+                        </select>
+                      </div>
 
-                  <div class="input-wraper d-flex justify-content-between">
-                  <label for="mygtuku-remo-spalvos" class="fs-5">Mygtuko rėmelio spalva:</label>
-                  <select class="form-control js-example-tags js-example-responsive" style="width: 50%" id="mygtuku-remo-spalvos">
-                    <option selected="selected" disabled>Pasirinkite</option>
-                    <option>Raudona</option>
-                    <option>Geltona</option>
-                  </select>
-                </div>
-                  <div class="btn-wraper d-inline-flex gap-3">
-                  <button class="btn fs-15 fw-bold btn-ligth-blue text-white">Pirkti</button>
-                  <button class="btn fs-15 fw-bold btn-dark-blue text-white">Į krepšeli</button>
-                </div>
-                <p class="fs-14">Siuntų pristatymo laikas Lietuvoje – 3-5 d.d</p>
-                </form>
+                      <div
+                        class="input-wraper d-flex flex-column flex-sm-row justify-content-between gap-2 gap-sm-0"
+                      >
+                        <label for="pagrindo-spalvos" class="fs-5"
+                          >Pagrindo spalvos:</label
+                        >
+                        <select
+                          class="form-control js-example-tags js-example-responsive"
+                          style="width: 50%"
+                          id="pagrindo-spalvos"
+                        >
+                          <option selected="selected" disabled>
+                            Pasirinkite
+                          </option>
+                          <option>Raudona</option>
+                          <option>Geltona</option>
+                        </select>
+                      </div>
+
+                      <div
+                        class="input-wraper d-flex flex-column flex-sm-row justify-content-between gap-2 gap-sm-0"
+                      >
+                        <label for="mygtuku-spalvos" class="fs-5"
+                          >Mygtukų spalvos:</label
+                        >
+                        <select
+                          class="form-control js-example-tags js-example-responsive"
+                          style="width: 50%"
+                          id="mygtuku-spalvos"
+                        >
+                          <option selected="selected" disabled>
+                            Pasirinkite
+                          </option>
+                          <option>Raudona</option>
+                          <option>Geltona</option>
+                        </select>
+                      </div>
+
+                      <div
+                        class="input-wraper d-flex flex-column flex-sm-row justify-content-between gap-2 gap-sm-0"
+                      >
+                        <label for="mygtuku-remo-spalvos" class="fs-5"
+                          >Mygtuko rėmelio spalva:</label
+                        >
+                        <select
+                          class="form-control js-example-tags js-example-responsive"
+                          style="width: 50%"
+                          id="mygtuku-remo-spalvos"
+                        >
+                          <option selected="selected" disabled>
+                            Pasirinkite
+                          </option>
+                          <option>Raudona</option>
+                          <option>Geltona</option>
+                        </select>
+                      </div>
+                      <div
+                        class="btn-wraper d-flex flex-column d-sm-inline-flex flex-sm-row gap-3"
+                      >
+                        <button
+                          class="btn fs-15 fw-bold btn-ligth-blue text-white"
+                        >
+                          Pirkti
+                        </button>
+                        <button
+                          class="btn fs-15 fw-bold btn-dark-blue text-white"
+                        >
+                          Į krepšeli
+                        </button>
+                      </div>
+                      <p class="fs-14">
+                        Siuntų pristatymo laikas Lietuvoje - 3-5 d.d
+                      </p>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-            </section>
+          </div>
+
+          <div class="info-aprasymas-wraper py-5">
+            <div class="container-xl d-flex flex-column flex-md-row">
+              <div class="tech-info mb-5 mb-md-0">
+                <h2 class="fs-4 fw-800 mb-4">Techninė informacija</h2>
+                <p class="mb-0 fs-5 fw-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum. Curabitur pretium tincidunt lacus.
+                  Nulla gravida orci a odio. Nullam varius, turpis et commodo
+                  pharetra, est eros bibendum elit, nec luctus magna felis
+                  sollicitudin mauris. Integer in mauris eu nibh euismod
+                  gravida. Duis ac tellus et risus vulputate vehicula. Donec
+                  lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu
+                  tempor congue, eros est euismod turpis, id tincidunt sapien
+                  risus a quam. Maecenas fermentum consequat mi.
+                </p>
+              </div>
+              <div class="aprasymas">
+                <h2 class="fs-4 fw-800 mb-4">Aprašymas</h2>
+                <p class="mb-0 fs-5 fw-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum. Curabitur pretium tincidunt lacus.
+                  Nulla gravida orci a odio. Nullam varius, turpis et commodo
+                  pharetra, est eros bibendum elit, nec luctus magna felis
+                  sollicitudin mauris. Integer in mauris eu nibh euismod
+                  gravida. Duis ac tellus et risus vulputate vehicula. Donec
+                  lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu
+                  tempor congue, eros est euismod turpis, id tincidunt sapien
+                  risus a quam. Maecenas fermentum consequat mi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Product pabaiga -->
     </main>
     <!-- Footer pradzia -->
@@ -347,7 +501,7 @@
       </div>
     </footer>
     <!-- Footer pabaiga -->
-    
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -358,26 +512,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script>
       $(function () {
-  $("#rateYo").rateYo({
-    rating: 4.5,
-    starWidth: "30px",
-    spacing: "5px",
-    normalFill: "#D9D9D9", 
-    ratedFill: "#000000",   
-  });
-});
+        $("#rateYo").rateYo({
+          rating: 4.5,
+          starWidth: "30px",
+          spacing: "5px",
+          normalFill: "#D9D9D9",
+          ratedFill: "#000000",
+        });
+      });
     </script>
-    
-   
+
     <script>
-      $("#ilgis-plotis, #mygtuku-skaicius, #kampu-radiusas, #jungties-ilgis").select2({
+      $(
+        "#ilgis-plotis, #mygtuku-skaicius, #kampu-radiusas, #jungties-ilgis"
+      ).select2({
         tags: true,
-        
       });
       $("#pagrindo-spalvos, #mygtuku-spalvos, #mygtuku-remo-spalvos").select2({
-        minimumResultsForSearch: -1,       
+        minimumResultsForSearch: -1,
       });
-     
     </script>
     <script src="./script.js"></script>
   </body>
