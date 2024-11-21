@@ -682,8 +682,13 @@ body {
     height: 284px;
   }
   #product-section {
-    padding-top: 116px !important;
+    padding-top: 76px !important;
   }
+
+  #product-section .product {
+    padding-top: 48px !important;
+  }
+
   #product-section .thumb-img-wraper {
     width: 135px;
     height: 135px;
@@ -758,5 +763,12 @@ body {
   }
   .select2-container {
     width: 100% !important;
+  }
+  #product-section .thumb-img-wraper {
+    width: 90px;
+    height: 90px;
+  }
+  #product-section .main-image {
+    min-height: 320px;
   }
 }
